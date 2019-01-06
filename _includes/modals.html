@@ -17,39 +17,41 @@
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
             <hr class="star-primary" />
+            {% if post.url %}
+            <div class="iframe-content">
+              <iframe
+                src="https://www.youtube.com/embed/{{ post.youtube }}"
+                frameborder="0">
+              </iframe>
+            </div>
+            {% else %}
             <img
               src="img/portfolio/{{ post.img }}"
               class="img-responsive img-centered"
               alt="{{ post.alt }}"
             />
+            {% endif %}
             {% if post.description %}
             <p>{{ post.description }}</p>
             {% endif %}
             <ul class="list-inline item-details">
-              {% if post.client %}
-              <li>
-                Client:
-                <strong
-                  ><a href="http://startbootstrap.com">{{ post.client }}</a>
-                </strong>
-              </li>
-              {% endif %} {% if post.project-date %}
+            {% if post.project-date %}
               <li>
                 Date:
-                <strong
-                  ><a href="http://startbootstrap.com">{{
-                    post.project - date
-                  }}</a>
-                </strong>
+                <strong>{{ post.project-date }}</strong>
               </li>
-              {% endif %} {% if post.category %}
+            {% endif %}
+            {% if post.category %}
               <li>
-                Service:
-                <strong
-                  ><a href="http://startbootstrap.com">{{ post.category }}</a>
-                </strong>
+                Category:
+                <strong>{{ post.category }}</strong>
               </li>
-              {% endif %}
+            {% endif %}
+            {% if post.github %}
+              <li>
+                <a href="{{ post.github }}" target="_blank">Repository</a>
+              </li>
+            {% endif %}
             </ul>
             <button type="button" class="btn btn-default" data-dismiss="modal">
               <i class="fa fa-times"></i> Close
