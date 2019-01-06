@@ -4,8 +4,8 @@ email: odk.mmmm@gmail.com
 url: https://chromee.github.io
 description: 'Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.'
 keywords: 'unity, C#, ruby, rails, python'
-skills: 'Web Developer - Game Developer'
-meta_author: LastName FirstName
+skills: 'Web-Game Developer'
+meta_author: chorome
 
 # Google webmaster tools
 google_verify:
@@ -19,17 +19,15 @@ disqus_shortname: chorome
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: '24,288,156' #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
+  primary: 69306D #80B3FF
+  primary-rgb: '255,242,173' #"128,179,255"
+  secondary: 69306D #FD6E8A
   secondary-dark: 233140 #A2122F
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
   social: Around the Web
-  credits: Credits
+  copyright: chorome
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -39,6 +37,15 @@ social:
     url: https://www.facebook.com/profile.php?id=100009575179002
   - title: github
     url: https://github.com/chromee
+
+vtubers:
+  - img: char.webp
+    url: https://twitter.com/Charlotte_HNST
+  - img: nomu.webp
+    url: https://twitter.com/suntory_nomu
+  - img: neu.webp
+    url: https://twitter.com/mitukineu
+
 
 # Postal address (add as many lines as necessary)
 # address:

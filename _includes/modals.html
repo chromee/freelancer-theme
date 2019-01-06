@@ -2,7 +2,7 @@
 {% for post in site.posts %}
 <div
   class="portfolio-modal modal fade"
-  id="portfolioModal-{{ post.modal-id }}"
+  id="portfolioModal-{{ forloop.index }}"
   tabindex="-1"
   role="dialog"
   aria-hidden="true"
@@ -17,7 +17,8 @@
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
             <hr class="star-primary" />
-            {% if post.url %}
+
+            {% if post.youtube %}
             <div class="iframe-content">
               <iframe
                 src="https://www.youtube.com/embed/{{ post.youtube }}"
@@ -31,9 +32,11 @@
               alt="{{ post.alt }}"
             />
             {% endif %}
+
             {% if post.description %}
             <p>{{ post.description }}</p>
             {% endif %}
+            
             <ul class="list-inline item-details">
             {% if post.project-date %}
               <li>
@@ -48,9 +51,18 @@
               </li>
             {% endif %}
             {% if post.github %}
-              <li>
-                <a href="{{ post.github }}" target="_blank">Repository</a>
-              </li>
+            <li>
+              <a href="{{ post.github }}" target="_blank">
+                <i class="fa fa-fw fa-github"></i>
+              </a>
+            </li>
+            {% endif %}
+            {% if post.link %}
+            <li>
+              <a href="{{ post.link }}" target="_blank">
+                <i class="fa fa-fw fa-link"></i>
+              </a>
+            </li>
             {% endif %}
             </ul>
             <button type="button" class="btn btn-default" data-dismiss="modal">
